@@ -324,7 +324,7 @@ class BinarySearchTreeTest {
       immutableBst as MutableBinarySearchTree<Int, String>
     }
 
-    // Get the insert method using reflection
+    // Get the insert method using reflection (because we can't test if it doesn't compile)
     assertFailsWith<NoSuchMethodException> {
       immutableBst::class.java.getMethod("insert", Comparable::class.java, Any::class.java)
     }
